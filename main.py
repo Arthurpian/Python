@@ -77,11 +77,58 @@ while valor < qtd:
 
 print(lista)
 """""
-
+"""""
 lista = [ ]
 qtd = int(input("Quantos nomes você quer colocar: "))
 for i in range(qtd):
     nome = input(f"Diga o {i+1} nome: ")
     lista.append(nome)
 print(lista)
+"""""
+"""""
+lista = [0,0,1,0,1,1]
+sequencia = [1,0,1]
+teste = False
+
+for i in range(len(lista)-len(sequencia)+1):
+    if lista[i] == sequencia[0]:
+            for k in range(1, len(sequencia)):
+                if lista[i+k] != sequencia[k]:
+                    break
+                if k == len(sequencia)-1:
+                    teste = True
+if teste:
+    print("Exite")
+else:
+    print("Não existe")
+"""""
+"""""
+lista = [12,2,3,5,32235,363,2596000]
+
+def achar_maior(numeros):
+    indice_maior = 0
+    maior = numeros[indice_maior]
+    for i in range(len(numeros)):
+        if numeros[i] > maior:
+            maior = numeros[i]
+            indice_maior = i
+    return indice_maior
+
+indice_maior_elemento = achar_maior(lista)
+print(indice_maior_elemento)
+print(lista[indice_maior_elemento])
+"""""
+"""""
+matriz = [[1,2,3],[423,5,6],[5,2332,90000]]
+for i in range(len(matriz)):
+    for j in range(len(matriz[0])):
+        print(matriz[i][j])
+"""""
+"""""
+import numpy as np
+matriz = [1,2,3],[423,5,6],[5,2332,90000]
+matriz = np.array(matriz)
+print(matriz)
+"""""
+
 
