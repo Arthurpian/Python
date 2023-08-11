@@ -130,5 +130,106 @@ matriz = [1,2,3],[423,5,6],[5,2332,90000]
 matriz = np.array(matriz)
 print(matriz)
 """""
+def printa_matriz(matriz):
+    for i in range(len(matriz)):
+         print(matriz[i])
+    return
+
+def marta ( linha,coluna ):
+    matriz=[]
+    for i in range(linha):
+        matriz.append([])
+        for j in range(coluna):
+            matriz[i].append(0)
+    return matriz
+
+def soma_matriz(matriz1,matriz2):
+    for i in range(len(matriz1)):
+        for j in range(len(matriz1[0])):
+            matriz1[i][j] = matriz1[i][j]+matriz2[i][j]
+    return matriz1
+
+def troca (matriz):
+    for i in range(len(matriz)):
+        for j in range(len(matriz)//2+1):
+            aux = matriz[i][j]
+            matriz [i][j]  = matriz[j][i]
+            matriz[j][i] = aux
+        return matriz
+
+"""""
+Zerar a lista
+
+matriz=[[1,2,3],[4,5,6],[7,8,9]]
+def printa_matriz(matriz):
+    for i in range(len(matriz)):
+        print(matriz)
+    return 
+matriz_1=[[1,2,3,10],[4,5,6,11],[7,8,9,12]]
+for i in range(len(matriz_1)):
+    for j in range(len(matriz_1[1])):
+        matriz_1[i][j]= 0
+printa_matriz(matriz_1)
+"""""
+matriz = [ [12,22,32,42,52],[15,24,39,48,57],[12,21,33,42,51],[11,21,32,41,55],[10,20,30,40,50]]
+"""""
+printa_matriz(matriz)
+for j in range(1, len(matriz[0]),2):
+    print(f"Coluna indice {j}")
+    for i in range(len(matriz)):
+        print(matriz[i][j])
+
+for i in range(0, len(matriz),2):
+    print(f"Linha {i}")
+    for j in range(len(matriz[0])):
+        print(matriz[i][j], end=" ")
+    print()
+"""""
+"""""                                                                                            for i in range(len(matriz)):
+    print(" "*4*i, end=" ")
+    print(matriz[i][i])
+"""""
+"""""  
+matriz_1 = marta(10,10)
+for i in range(len(matriz_1)):
+    for j in range(len(matriz_1[0])):
+        if i == j :
+            matriz_1[i][j] = 1
+printa_matriz(matriz_1)
+
+import matplotlib.pyplot as pit
+pit.imshow(matriz_1, "hot")
+pit.colorbar()
+pit.show()
+"""""
+matriz1 = [9,8,7],[6,5,4],[3,2,1]
+matriz2 = [1,2,3],[4,5,6],[7,8,9]
+"""""  
+soma = soma_matriz(matriz1,matriz2)
+printa_matriz(soma)
+"""""
+"""""  
+matriz1 = [9,8,7],[6,5,4],[3,2,1]
+printa_matriz(matriz1)
+print()
+matriz1_transposta = troca(matriz1)
+printa_matriz(matriz1_transposta)
+"""""
+matr = marta(6,6)
+for i in range(len(matr)):
+    for j in range(len(matr)):
+        if i % 2 == 0:
+            if j % 2 == 0:
+                matr[i][j] = 1
+            else:
+                matr[i][j] = 0
+        else:
+            if j % 2 == 0:
+                matr[i][j] = 0
+            else:
+                matr[i][j] = 1
+                
+printa_matriz(matr)
+
 
 
