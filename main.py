@@ -230,6 +230,89 @@ for i in range(len(matr)):
                 matr[i][j] = 1
                 
 printa_matriz(matr)
+'''
+def msotra_matriz(matriz):
+    for i in range(len(matriz)):
+        print(matriz[i])
+    return
 
+def criar(linhas, colunas):
+    matriz = []
+    for i in range(linhas):
+        matriz.append([])
+        for j in range(colunas):
+            matriz[i].append(0)
+    return matriz
+
+lista = criar(10,10)
+
+for i in range(len(lista)):
+    for j in range(i+1,len(lista)):
+            lista[i][j] = 2
+
+msotra_matriz(lista)
+
+print()
+
+for i in range(len(lista)):
+    for j in range(i,len(lista[0])):
+        aux = lista[i][j]
+        lista[i][j] = lista[j][i]
+        lista[j][i] = aux
+
+msotra_matriz(lista)
+'''
+pesos = [1,2,3,2,1]
+alunos = criar(5,10)
+soma_pesos = 9
+notas = []
+
+for j in range(len(alunos[0])):
+    soma = 0
+    for i in range(len(pesos)):
+        soma+= pesos[i] * alunos [i][j]
+    soma/= soma_pesos
+    notas.append(soma)
+print(notas)
+def msotra_matriz(matriz):
+    for i in range(len(matriz)):
+        print(matriz[i])
+    return
+
+def criar(linhas, colunas):
+    matriz = []
+    for i in range(linhas):
+        matriz.append([])
+        for j in range(colunas):
+            matriz[i].append(0)
+    return matriz
+
+
+lista = criar(10,10)
+'''
+lista_2 = criar(10,10)
+
+for i in range(len(lista)):
+    for j in range(len(lista[0])):
+        if j % 2 == 0:
+            lista[i][j] = 1
+
+
+
+for i in range(1, len(lista_2), 2):
+    for j in range(len(lista_2)):
+            lista_2[i][j] = 2
+
+msotra_matriz(lista)
+print()
+msotra_matriz(lista_2)
+'''
+for i in range(len(lista)):
+    for j in range(len(lista[0])):
+        if i%2 == j%2:
+            lista[i][j] = 0
+        else:
+            lista[i][j] = 1
+msotra_matriz(lista)
 
 
