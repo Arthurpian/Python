@@ -315,4 +315,111 @@ for i in range(len(lista)):
             lista[i][j] = 1
 msotra_matriz(lista)
 
+'''lista = { 'par':[-2] , 'impar':[-1]}
+
+for i in range(10):
+    if i % 2 == 0:
+        lista['par'].append(i)
+    else:
+        lista['impar'].append(i)
+
+print(lista)'''
+
+import pandas as pd
+"""carros = {"modelo": ['up','ka','celtinha', 'gol'],
+          'precos' : [10,20,1000,50]
+          }
+
+carros['potencia (cv)'] = [40,50,73,10]"""
+
+"""print(pd.DataFrame(carros))"""
+
+"print(carros.keys())"
+
+def achar_maior(lista):
+    maior=lista[0]
+    indice_maior= 0
+    for i in range(len(lista)):
+        if lista[i]>maior:
+            maior = lista[i]
+            indice_maior = i
+    return indice_maior
+
+"""local_maior = achar_maior(carros['precos'])
+print(pd.DataFrame(carros))
+
+for key in carros.keys():
+    print(f'{key}: {carros[key][local_maior]}')    """
+
+
+"Adicionar elementos na lista em mais que uma categoria"
+"""def checar_resposta(lista_resposta,msg):
+    opcao = input(msg)
+    while opcao not in lista_resposta:
+        opcao = input(msg)
+    return opcao
+
+
+while True:
+    s_ou_n = checar_resposta(['s' , 'n'], "Quer cadastrar um carro ? (s/n) ")
+
+    if s_ou_n == 's':
+        for key in carros.keys():
+            valor = input(f'Digite {key}: ')
+            carros[key].append(valor)
+    break
+
+print(pd.DataFrame(carros))"""
+
+"""frase = "A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha."
+frase = frase.lower()
+"Pega todos os . e troca por nada"
+frase = frase.replace('.','')
+"Faz a frase virar uma lista"
+frase = frase.split(" ")
+print(frase)
+
+disc = {}
+
+for palavra in frase:
+    if palavra not in disc.keys():
+        disc[palavra] = 1
+    else:
+        disc[palavra] += 1
+
+
+print(disc)"""
+
+"""def criar_categorias (frase):
+    disc= {}
+    frase = frase.lower()
+
+    for char in [',','.','!','?']:
+        frase = frase.replace(char,'')
+
+    frase = frase.split(" ")
+
+    for palavra in frase:
+        if palavra not in disc.keys():
+            disc[palavra] = 1
+        else:
+            disc[palavra] += 1
+    return disc
+
+frase = "A aranha arranha a rã. A rã arranha a aranha. Nem a aranha arranha a rã. Nem a rã arranha a aranha."
+
+frase_categorizada = criar_categorias(frase)
+print(frase_categorizada)
+"""
+
+carros = {"modelo": ['up','ka','celtinha', 'gol'],
+          "precos" : [10,20,1000,50],
+          "potencia (cv)" : [40,50,73,10]
+          }
+
+cliente = {"modelo": ['up','ka','celtinha', 'gol'],
+          "ano" : [2020,2019,1700,1950],
+          "clientes_antigos" : ['Rian','Marcos','Ronaldo',"vivian"]
+}
+
 
